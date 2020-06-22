@@ -1,1 +1,15 @@
-test
+
+오늘 공부
+1.Paging 처리
+2.게시판 원하는 게시물만 보기 (ex 자유게시판, 의견게시판)
+3.vue component url parameter로 데이터 전달
+
+1.Paging 처리
+게시글의 갯수에 따른 paging처리를 적용했다. Page갯수는 5개씩 짤라서 적용했고 보이는 형식은 1 / 2 의 형태로 만들었다.
+
+```
+ <button :disabled="pageNum == 0" @click="prevPage">이전</button>
+        <span class="page-count">{{ pageNum + 1 }} / {{ pageCount }}</span>
+        <button :disabled="pageNum >= pageCount - 1" @click="nextPage">다음</button>
+```
+
