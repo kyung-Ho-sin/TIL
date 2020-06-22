@@ -4,13 +4,47 @@
 2.게시판 원하는 게시물만 보기 (ex 자유게시판, 의견게시판)
 3.vue component url parameter로 데이터 전달
 
-1.Paging 처리
+## Paging 처리
 게시글의 갯수에 따른 paging처리를 적용했다. Page갯수는 5개씩 짤라서 적용했고 보이는 형식은 1 / 2 의 형태로 만들었다.
-<pre>
-<code>
- <button :disabled="pageNum == 0" @click="prevPage">이전</button>
-        <span class="page-count">{{ pageNum + 1 }} / {{ pageCount }}</span>
-        <button :disabled="pageNum >= pageCount - 1" @click="nextPage">다음</button>
-</code>
-</pre>
+
+```
+<button :disabled="pageNum == 0" @click="prevPage">이전</button>
+   <span class="page-count">{{ pageNum + 1 }} / {{ pageCount }}</span>
+   <button :disabled="pageNum >= pageCount - 1" @click="nextPage">다음</button>
+```
+
+버튼은 이전 버튼과 다음 버튼은 pageNum의 숫자의 따라 작동하지 않게 disabled를 적용해놨다.
+
+페이징 처리를 할떄 가장 어려웠던건 데이터를 적제하는 변수에 값이 담기기 전에 페이징 로직도 같이 처리가 되서 그부분을 해결하는게 많은 시간을 투자했다.
+
+데이터를 적제하는 메소드의 마지막 부분에 페이징 처리하는 방식으로 로직을 변경했다.
+```
+selectAll() {
+          console.log(this.selectboard)
+
+          this.$axios.post('/st_user/selectboard',{select : this.selectboard})
+          .then((response) => {
+              this.res_datas = response.data
+              console.log("res_datas : " + this.res_datas.length)
+              if(this.res_datas.length > 5){
+                  if(this.res_datas.length % 5 != 0){
+                      this.pageCount = parseInt(this.res_datas.length / 5) + 1
+                      console.log("여기는 5개이상" + this.pageCount)
+                      this.paging()
+                  }else{
+                      this.pageCount = this.res_datas / 5
+                      console.lgo("여기는 5개 이하" +this.pageCount)
+                      this.paging()
+                  }
+              }else{
+                  this.pageCount = 1
+                  this.paging()
+              }
+          })
+```
+
+2.
+
+
+
 
