@@ -1,1 +1,61 @@
-qq
+
+*오늘 한일*
+1.게시판 수정 부분 적용
+2.게시판 수정 삭제 api뚫기
+
+## 게시판 수정 부분 적용
+오늘은 게시판 수정부분을 적용했다. 수정부분을 적용할때 새로운 페이지를 하나 만들어야 하나 생각하던중 기존 작성하던 페이지에서
+사용자의 게시물 번호를 url뒤에 붙여서 전송을하는 방식으로 적용했다. 해당부분은 이렇다.
+```
+  {
+    path: '/steveUser/board/boardDetail/:number',
+    name: 'steveUserBoardDetail',
+    component: () => import(/* webpackChunkName: "BoardDetail" */ '@/views/steveUser/BoardDetail.vue'),
+    props : true
+  },
+```
+url 뒤에 :number 를 붙여 게시물번호를 url로 받을수 있게 지정해준다.
+```
+created() {
+        this.board_no = this.$route.params.number
+   }
+```
+url 뒤에 있는 number에 대한 값을 board_no 에 저장한후 게시물번호로 데이터를 호출해 기존에 있는 값들에 넣어서 사용
+
+@@게시판 수정 삭제 api뚫기 
+```
+@RequestMapping(value="/delboard", method = RequestMethod.POST )
+	public int delBaord(HttpServletRequest req, HttpServletResponse res, @RequestBody Map<String, Object> boardInsert) {
+		
+		Map<String, Object> selectAll = new HashMap<String, Object>();
+		
+		int result_insert = sql.update("Board.deleteBoard", boardInsert);
+		
+		return result_insert;
+	}
+```
+삭제 부분은 데이터를 삭제하는게 아닌 DB의 타입컬럼의 값을 변경해 데이터를 불러올때 제외시키는 방식으로 진행했다.
+
+```
+@RequestMapping(value="/Insertboard", method = RequestMethod.POST )
+	public void boardInsert(HttpServletRequest req, HttpServletResponse res, @RequestBody Map<String, Object> boardInsert) {
+		
+		Map<String, Object> selectAll = new HashMap<String, Object>();
+		//날짜 Format ex)2020/06/15/12:33 
+		Date today = new Date();
+		SimpleDateFormat date = new SimpleDateFormat("yyyy/MM/dd/HH:mm");
+		
+		if(boardInsert.get("type").equals("Front-end게시판")) {
+			boardInsert.put("type", "f");
+		}else {
+			boardInsert.put("type", "b");
+		}
+		
+//		int result_insert = sql.insert("Board.insertBoard", boardInsert);
+		
+	}
+```
+수정부분은 url만 뚫어놓고 인증부분을 아직 해결하지 않아서 주석처리를 해놨다. 
+슬슬 프로젝트의 끝이 보이기 시작했다. 마지막까지 맡은 부분을 다 완성한후 개인프로젝트에 다시 전념할것이다.
+
+
