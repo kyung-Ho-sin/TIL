@@ -1,0 +1,50 @@
+
+*오늘 한일 *
+1.spring jsp 에 bootstrap 사용하기
+2.로그인상태에 따른 멘트 변화
+
+##1
+spring 프레임워크에서 css, js, image 와같은 파일은 src/main/webapp 아래에 resources에 주로 파일을 저장한다. 무조건 적으로 그곳에 저장하는것은 아니다. webapp폴더 위치에서 새로 폴더를 만들고
+해당 폴더에 저장해도 상관 없다. 하지만 해당위치에 파일을 저장하고 사용하기 위해서는 한가지의 설정이 필요하다.
+
+servlet-context.xml
+
+```
+<mvc:resources mapping="/resources/**" location="/resources/" />
+<mvc:resources mapping="/login_bootstrap/**" location="/login_bootstrap/" />
+<mvc:resources mapping="/mainpage_bootstrap/**" location="/mainpage_bootstrap/" />
+```
+servlet-context 파일에서 resources가 작성되어있는걸 볼수 있을것이다. 사용하려는 파일을 위에 resources와 같이 설정하면 해당폴더를 찾아가 아래에 있는 파일을 사용할수 있게된다.
+
+##2
+로그인 session를 가져와 jsp 화면에서 로그인상태와 비로그인상태에 따른 화면 멘트 변화
+```
+<%
+	String login_session = (String)request.getAttribute("conn_se");
+	System.out.println("현재 Session :" + login_session);
+%>
+```
+
+```
+<%
+  if(login_session != null){
+%>
+  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="aca_Logout.p">로그아웃</a>
+  </li>
+  <% 
+  }else{
+  %>
+  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="aca_LoginPage.p">로그인</a>
+  </li>
+  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="aca_membershipJoinPage.p">회원가입</a>
+  </li>
+  <%
+    }
+  %>
+```
+현재 서버를 재시작을 하게 되면 해당페이지를 찾을수 없다라는 화면이 나오고 있다. 이러한 부분을 세션이 없을떄 페이지를 요청하면 처음화면으로 돌아가게 interceptor를 설정해야 할듯하다.
+오늘은 회원가입 UI부분과 bootstrap을 적용시키는 작업을 진행했다. 점점 개인프로젝트의 윤곽이 들어나고 있다. 내일의 TIL은 DB정보를 가져와 JSP에 노출시키는것과 회원가입부분 UI를 수정하여
+적용하는 것이 목표이다.
+
+
+
