@@ -49,7 +49,7 @@ git reset --hard HEAD^ : commit을 취소하고 해당파일을 unstaged상태�
 git reset --hard HEAD : 마지막 commit이후의 워킹 디렉토리와 add 했던 파일들이 모두 사라진다. (즉 commit 과 add 했던게 다 사라진다. 마지>막 commit 기준으로)
 ```
 
-// git stash
+#### git 작업중인 파일 임시파일로 저장하기!🤔 
 >git stash 란 현재 작업하고 있던일을 잠시 임시저장 하는 느낌의 명령어이다.
 >git stash명령을 사용하면 기존에 작업하던일을 저장한다.
 ```
