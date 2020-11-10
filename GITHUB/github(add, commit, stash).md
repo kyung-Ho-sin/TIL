@@ -26,17 +26,17 @@ git diff HEAD를 입력하면 작업트리, 스테이징 영역, 저장소의 �
 
 참조사이트 : [오늘 공부한 GIT](https://uxgjs.tistory.com/79?category=832417)
 
-#### 문득 알고싶어진 add 와 commit 의 취소방법 
+#### 문득 알고싶어진 add 와 commit 의 취소방법🤗
 git add / git commit 의 상태확인 과 취소방법
 
 git add 한 파일들 확인방법 : git status
-
+<img src="/사진/git_Status.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 git add 취소하는 방법 : git reset HEAD 파일명
 git add 전제 취소하는방법 : git reset HEAD
 
 git commit 한 파일들 확인방법 : git log를 치면 commit한 기록들이 전부 나오게 된다.(해당 레파지토리 내용만)
 
-git reset --soft HEAD^ : commit 한 파일들을 전부 staged 상태로 이동시킨다.
+git reset --soft HEAD^ : commit 한 파일들을 전부 staged 상태로 이동시킨다.(staged 상태는 add 한 후의 상태이다)
 git reset --soft HEAD~1 : 마지막으로한 commit 1개의 파일을 staged 상태로 이동시킨다.
 git reset --mixed HEAD^ : commit한 파일을 취소하고 unstaged 상태로 이동시킨다. (unstaged 상태는 add 를 하기 전의 상태이다)
 git reset HEAD^ : 위의 기능과 같다.
