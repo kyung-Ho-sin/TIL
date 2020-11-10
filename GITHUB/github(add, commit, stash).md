@@ -24,7 +24,7 @@ index 0000000..e69de29
 테스트용으로 파일을 만들고 해당파일을 add 한 상태이다.
 git diff HEAD를 입력하면 작업트리, 스테이징 영역, 저장소의 차이점을 모두 보여준다. diff 를 사용해 각각의 차이점을 보려면 여러 파일을 만들어서 테스트를 진행해야 할듯하다.🤗
 
--참조사이트[오늘 공부한 GIT](https://uxgjs.tistory.com/79?category=832417)
+참조사이트 : [오늘 공부한 GIT](https://uxgjs.tistory.com/79?category=832417)
 
 #### 문득 알고싶어진 add 와 commit 의 취소방법 
 git add / git commit 의 상태확인 과 취소방법
