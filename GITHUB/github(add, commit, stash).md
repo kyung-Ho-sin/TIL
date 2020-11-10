@@ -29,7 +29,6 @@ index 0000000..e69de29
 >git add 한 파일들 확인방법 : git status 
 <br>![git_Status](https://user-images.githubusercontent.com/51444580/98636411-23428680-236a-11eb-868d-7f4999bbdc99.PNG)
 
-
 >git add 취소하는 방법 : git reset HEAD 파일명
 >git add 전제 취소하는방법 : git reset HEAD
 
