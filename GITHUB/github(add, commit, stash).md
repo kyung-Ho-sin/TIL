@@ -30,7 +30,7 @@ git diff HEAD를 입력하면 작업트리, 스테이징 영역, 저장소의 �
 git add / git commit 의 상태확인 과 취소방법
 
 git add 한 파일들 확인방법 : git status
-<img src="C:\git_picture/git_Status.png" width="40%" height="30%"></img>
+<img src="\C:\git_picture/git_Status.png" width="40%" height="30%"></img>
 git add 취소하는 방법 : git reset HEAD 파일명
 git add 전제 취소하는방법 : git reset HEAD
 
