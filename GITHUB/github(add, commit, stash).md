@@ -29,8 +29,8 @@ git diff HEAD를 입력하면 작업트리, 스테이징 영역, 저장소의 �
 #### 문득 알고싶어진 add 와 commit 의 취소방법🤗
 git add / git commit 의 상태확인 과 취소방법
 
-git add 한 파일들 확인방법 : git status
-![git_Status](https://user-images.githubusercontent.com/51444580/98636411-23428680-236a-11eb-868d-7f4999bbdc99.PNG)
+git add 한 파일들 확인방법 : git status 
+<br>![git_Status](https://user-images.githubusercontent.com/51444580/98636411-23428680-236a-11eb-868d-7f4999bbdc99.PNG)
 
 
 git add 취소하는 방법 : git reset HEAD 파일명
