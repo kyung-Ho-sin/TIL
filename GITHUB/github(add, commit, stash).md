@@ -33,7 +33,7 @@ index 0000000..e69de29
 >git add 전제 취소하는방법 : git reset HEAD
 
 >git commit 한 파일들 확인방법 : git log를 치면 commit한 기록들이 전부 나오게 된다.(해당 레파지토리 내용만)
-
+```
 >git reset --soft HEAD^ : commit 한 파일들을 전부 staged 상태로 이동시킨다.(staged 상태는 add 한 후의 상태이다)
 >git reset --soft HEAD~1 : 마지막으로한 commit 1개의 파일을 staged 상태로 이동시킨다.
 >git reset --mixed HEAD^ : commit한 파일을 취소하고 unstaged 상태로 이동시킨다. (unstaged 상태는 add 를 하기 전의 상태이다)
@@ -42,7 +42,7 @@ index 0000000..e69de29
 
 >git reset --hard HEAD^ : commit을 취소하고 해당파일을 unstaged상태로 워킹 디렉토리에서 파일을 삭제한다.
 >git reset --hard HEAD : 마지막 commit이후의 워킹 디렉토리와 add 했던 파일들이 모두 사라진다. (즉 commit 과 add 했던게 다 사라진다. 마지>막 commit 기준으로)
-
+```
 
 // git stash
 >git stash 란 현재 작업하고 있던일을 잠시 임시저장 하는 느낌의 명령어이다.
