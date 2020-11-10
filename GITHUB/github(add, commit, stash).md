@@ -25,10 +25,9 @@ index 0000000..e69de29
 
 #### 문득 알고싶어진 add 와 commit 의 취소방법🤗
 >git add / git commit 의 상태확인 과 취소방법
-
->git add 한 파일들 확인방법 : git status 
-<br>![git_Status](https://user-images.githubusercontent.com/51444580/98636411-23428680-236a-11eb-868d-7f4999bbdc99.PNG)
 ```
+>git add 한 파일들 확인방법 : git status 
+
 git add 취소하는 방법 : git reset HEAD 파일명
 
 git add 전제 취소하는방법 : git reset HEAD
@@ -45,17 +44,19 @@ git reset HEAD^ : 위의 기능과 같다.
 
 git reset HEAD~2 : 마지막 두개의 commit을 unstaged상태로 이동시킨다.
 
->git reset --hard HEAD^ : commit을 취소하고 해당파일을 unstaged상태로 워킹 디렉토리에서 파일을 삭제한다.
->git reset --hard HEAD : 마지막 commit이후의 워킹 디렉토리와 add 했던 파일들이 모두 사라진다. (즉 commit 과 add 했던게 다 사라진다. 마지>막 commit 기준으로)
+git reset --hard HEAD^ : commit을 취소하고 해당파일을 unstaged상태로 워킹 디렉토리에서 파일을 삭제한다.
+
+git reset --hard HEAD : 마지막 commit이후의 워킹 디렉토리와 add 했던 파일들이 모두 사라진다. (즉 commit 과 add 했던게 다 사라진다. 마지>막 commit 기준으로)
 ```
 
 // git stash
 >git stash 란 현재 작업하고 있던일을 잠시 임시저장 하는 느낌의 명령어이다.
 >git stash명령을 사용하면 기존에 작업하던일을 저장한다.
-
->기존 작업파일을 임시로 저장 : git stash
->임시 저장 파일 확인 : git stash list
->임시 파일 가져오기 : git stash apply
->임시파일 일부만 가져오기 : git stash apply [stash 이름]
->임시파일 가져올시 staged 상태로 가져오기 : git stash apply --index
->임시파일 삭제 : git stash drop / git stash drop [stash 이름]
+```
+기존 작업파일을 임시로 저장 : git stash
+임시 저장 파일 확인 : git stash list
+임시 파일 가져오기 : git stash apply
+임시파일 일부만 가져오기 : git stash apply [stash 이름]
+임시파일 가져올시 staged 상태로 가져오기 : git stash apply --index
+임시파일 삭제 : git stash drop / git stash drop [stash 이름]
+```
