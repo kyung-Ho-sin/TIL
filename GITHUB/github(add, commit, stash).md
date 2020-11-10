@@ -54,9 +54,14 @@ git reset --hard HEAD : 마지막 commit이후의 워킹 디렉토리와 add 했
 >git stash명령을 사용하면 기존에 작업하던일을 저장한다.
 ```
 기존 작업파일을 임시로 저장 : git stash
+
 임시 저장 파일 확인 : git stash list
+
 임시 파일 가져오기 : git stash apply
+
 임시파일 일부만 가져오기 : git stash apply [stash 이름]
+
 임시파일 가져올시 staged 상태로 가져오기 : git stash apply --index
+
 임시파일 삭제 : git stash drop / git stash drop [stash 이름]
 ```
