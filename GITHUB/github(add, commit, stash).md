@@ -1,18 +1,19 @@
 ## git은 버전관리시스템이다.
 >*SVN 과 GIT 의 차이점은 SVN은 중앙집중식 버전관리 라면  GIT은 분산 버전관리 시스템이다.*
 
-git --version : git 버전 확인
+### 오늘 공부한 명령어
+1.git --version : git 버전 확인
 
-git init : git 저장소 생성
+2.git init : git 저장소 생성
 
-git status : 현재 변경사항을 조회
+3.git status : 현재 변경사항을 조회
 
-git add file : 로컬디렉토리에서 파일을 스테이징 영역에 올려 놓는다.
+4.git add file : 로컬디렉토리에서 파일을 스테이징 영역에 올려 놓는다.
 
-git commit -m "message" : 스테이징에 올라간 파일을들 커밋한다.
+5.git commit -m "message" : 스테이징에 올라간 파일을들 커밋한다.
 즉 로컬 저장소에만 반영을 한다는것을 말한다. 원격서버에는 아직 올라가지 않은 상태이다.
 
-git diff : 작업트리와 스테이징영역에 대한 차이점을 보여줍니다.
+6.git diff : 작업트리와 스테이징영역에 대한 차이점을 보여줍니다.
 --cached 옵션을 추가하면 스테이징 영역과 저장소의 차이점을 보여준다.
 $ git diff --cached
 diff --git a/GITHUB/diff_Test.txt.txt b/GITHUB/diff_Test.txt.txt
