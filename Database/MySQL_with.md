@@ -6,3 +6,5 @@
 
 ### 1. 프로그래머스 고득점Kit 문제풀기
 > 이부분은 문제를 풀었다는 인증샷으로 대체를 하겠다.
+![db_2020-11-12](https://user-images.githubusercontent.com/51444580/98896515-6f1d3900-24ec-11eb-9b0f-732a956d0cb8.PNG)
+<br>
