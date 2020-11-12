@@ -17,6 +17,8 @@ SET @var1 = 1;
 ```
 >위에 문법을 보면 뭔가 다른 부분이 있을것이다. 맞다 @가 붙어있는 변수가 뜬금없이 나오고 있다.
 >@가 의미하는 것은 프로시저가 실행이 끝나면 초기화가 되는데 @ 가 붙은 변수는 프로시저가 끝나도 계속 유지가 되는 값이된다. 
+
+참조사이트 : [stackoverflow](https://stackoverflow.com/questions/1009954/mysql-variable-vs-variable-whats-the-difference)
 ```
 SET var = 1;
 SET @var1 = 1;
