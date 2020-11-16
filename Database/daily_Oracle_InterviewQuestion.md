@@ -63,35 +63,35 @@ AND 테이블A.컬럼명 = 테이블B.컬럼명(+)
 개발 상식 <br/>
 >1. 객체 지향 프로그래밍이란 무엇인가? <br/>
  - 기능들을 여러 개의 객체 단위로 나눠 작업하는 방식을 말합니다. / 즉 독립된 객체 들의 모임이라 생각합니다. <br/>
- 1-1 추상화 <br/>
+ ##### 추상화 <br/>
  - 대상의 특성 중 불필요한 부분을 무시하고 공통점만 다루어 현실의 복잡성을 극복하고 목적에 집중할 수 있도록 하는 것 <br/>
- 1-2 캡슐화 <br/>
+ ##### 캡슐화 <br/>
  - 데이터를 외부에서 접근하는 것을 방지하고 오로지 함수를 통해서만 접근할 수 있게 하는 것 <br/>
- 1-3 상속성 <br/>
+ ##### 상속성 <br/>
  - 부모 클래스의 속성과 기능을 상속받아 동일하게 사용하는 것 <br/>
- 1-4 다형성 <br/>
+ ##### 다형성 <br/>
  - 동일 요청에 대해 서로 다른 방식으로 응답할 수 있도록 만드는 것 <br/>
 
 >2. 객체 지향적 설계 원칙 <br/>
- 2-1 SRP(Single Responsibility Principle) : 단일 책임 원칙 <br/>
+ ##### SRP(Single Responsibility Principle) : 단일 책임 원칙 <br/>
  - 클래스는 단 하나의 책임을 가져야 하며 클래스를 변경하는 이유는 단 하나의 이유이어야 한다. <br/>
- 2-2 OCP(Open-Closed Principle) : 개방-폐쇄 원칙 <br/>
+ ##### OCP(Open-Closed Principle) : 개방-폐쇄 원칙 <br/>
  - 확장에는 열려 있어야 하고 변경에는 닫혀 있어야 한다. <br/>
- 2-3 LSP(Liskov Substitution Principle) : 리스코프 치환 원칙 <br/>
+ ##### LSP(Liskov Substitution Principle) : 리스코프 치환 원칙 <br/>
  - 상위 타입의 객체를 하위 타입의 객체로 치환해도 상위 타입을 사용하는 프로그램은 정상적으로 동작해야 한다. <br/>
- 2-4 ISP(Interface Segregation Principle) : 인터페이스 분리 원칙 <br/>
+ ##### ISP(Interface Segregation Principle) : 인터페이스 분리 원칙 <br/>
  - 인터페이스는 그 인터페이스를 사용하는 클라이언트를 기준으로 분리해야 한다. <br/>
- 2-5 DIP(Dependency Inversion Principle) : 의존 역전 원칙 <br/>
+ ##### DIP(Dependency Inversion Principle) : 의존 역전 원칙 <br/>
  - 고수준 모듈은 저수준 모듈의 구현에 의존해서는 안된다. <br/>
 >3.Rest의 구체적인 개념 <br/>
  - HTTP URI 를 통해 자원을 명시하고, HTTP Method(Post, Get, Put, Delete)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.<br/>
- 3-1 장점<br/>
+ ##### 장점<br/>
  - HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용이 가능하다.<br/>
- 3-2 단점<br/>
+ ##### 단점<br/>
  - 사용할 수 있는 메소드가 4가지 밖에 없다.<br/>
 >4.Rest API란?<br/>
  - Rest 기반으로 서비스 API를 구현한 것<br/>
- 4-1 API란?<br/>
+ ##### API란?<br/>
  - 데이터와 기능의 집합을 제공하여 컴퓨터 프로그램간 상호작용을 촉진하며, 서로 정보를 교환가능 하도록 하는 것<br/><br/>
 >5.Restful 이란?<br/>
  - Rest라는 아키텍쳐를 구현하는 웹 서비스를 나타내기 위해 사용되는 용어이다. Rest api를 제공하는 웹 서비스를 Restful하다고 할수 있다.<br/>
@@ -100,6 +100,6 @@ AND 테이블A.컬럼명 = 테이블B.컬럼명(+)
  - 매우 짧은 개발 사이클의 반복에 의존하는 소프트웨어 개발 프로세스이다. 기능에 대한 자동화된 테스트케이스를 작성하고 해당 테스트 를 통과하는 간단한 코드를 작성해 리팩토링하는 과정입니다.<br/>
 
 >7. Array 와 Linked List<br/>
- 7-1 Array<br/>
+ ##### Array<br/>
   - 인덱스로 해당 원소에 접근할 수있다. 그렇기 대문에 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)의 시간이 걸린다.<br/>
   - 하지만 Array안에 원소를 삭제할시 모든 값을을 Shift해줘야 하기 때문에 O(n)의 시간이 걸린다.<br/>
