@@ -49,3 +49,6 @@ SELECT E1.EMPNO, E1.ENAME, E1.MGR, E2.EMPNO AS MGR_EMPNO, E2.ENAME AS MGR_ENAME
 FROM EMP E1 PULL OUTER JOIN EMP E2 ON (E1.MGR = E2.EMPNO)
 ```
 >전체 외부조인을 SQL-99문법으로 변경해서 작성한 것이다.
+
+#### 오늘 한 줄
+>오늘 서브쿼리까지 공부한 후 정리를 하려했지만 오후에 나가야할 일이 생겨서 서브쿼리는 내일 정리해서 올리겠다.
