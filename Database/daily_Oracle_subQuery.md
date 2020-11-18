@@ -10,17 +10,20 @@
 SELECT (SELECT NAME FROM test) A FROM TEST
 ```
 >SELECT절에 사용되는 서브쿼리
-2.Sub Query(서브 쿼리)<br/>
+
+2.Sub Query(서브 쿼리)
 ```
 SELECT * FROM TEST WHERE NAME IN (SELECT NAME FROM TEST)
 ```
 >서브쿼리의 명확한 사용처는 WHERE절에 사용되었을때<br/>
-3.Inline View(인라인 뷰)<br/>
+
+3.Inline View(인라인 뷰)
 ```
 SELECT * FROM (SELECT * FROM TEST) TB
 ```
 >FROM 절에 사용되는 쿼리 이다.<br/>
-4.Scalar SubQuery(스칼라 서브쿼리)<br/>
+
+4.Scalar SubQuery(스칼라 서브쿼리)
 ```
 SELECT (SELECT NAME FROM TEST LIMIT 1) A FROM TEST;
 ```
