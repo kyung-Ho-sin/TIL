@@ -9,7 +9,7 @@
 ```
 SELECT (SELECT NAME FROM test) A FROM TEST
 ```
->SELECT절에 사용되는 서브쿼리<br/> 
+>SELECT절에 사용되는 서브쿼리
 2.Sub Query(서브 쿼리)<br/>
 ```
 SELECT * FROM TEST WHERE NAME IN (SELECT NAME FROM TEST)
