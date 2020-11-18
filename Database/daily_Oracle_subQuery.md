@@ -5,26 +5,26 @@
 >서브쿼리는 SQL문을 실행하는 데 필요한 데이터를 추가로 조회하기 위해 SQL문 내부에서 사용하는 SELECT문을 의미합니다. 서브쿼리의 결과 값을 사용하여 기능을 수행하는 영역은 메인쿼리라고 부릅니다. 
 
 #### 서브쿼리의 종류
-1.Nested Query(중첩 쿼리)
+1.Nested Query(중첩 쿼리)<br/>
 ```
 SELECT (SELECT NAME FROM test) A FROM TEST
 ```
->SELECT절에 사용되는 서브쿼리 
-2.Sub Query(서브 쿼리)
+>SELECT절에 사용되는 서브쿼리<br/> 
+2.Sub Query(서브 쿼리)<br/>
 ```
 SELECT * FROM TEST WHERE NAME IN (SELECT NAME FROM TEST)
 ```
->서브쿼리의 명확한 사용처는 WHERE절에 사용되었을때
-3.Inline View(인라인 뷰)
+>서브쿼리의 명확한 사용처는 WHERE절에 사용되었을때<br/>
+3.Inline View(인라인 뷰)<br/>
 ```
 SELECT * FROM (SELECT * FROM TEST) TB
 ```
->FROM 절에 사용되는 쿼리 이다.
-4.Scalar SubQuery(스칼라 서브쿼리)
+>FROM 절에 사용되는 쿼리 이다.<br/>
+4.Scalar SubQuery(스칼라 서브쿼리)<br/>
 ```
 SELECT (SELECT NAME FROM TEST LIMIT 1) A FROM TEST;
 ```
->위치에 따라 구분되는것이 아니라 결과에 따라 구분되는 용어이다.
+>위치에 따라 구분되는것이 아니라 결과에 따라 구분되는 용어이다.<br/>
 
 #### 서브쿼리의 특징
 1.서브쿼리는 연산자와 같은 비교 또는 조회 대상의 오른쪽에 놓이며 괄호()로 묶어서 사용한다.
