@@ -21,7 +21,7 @@
  
 4. 트랜잭션의 시작과 종료<br/> 
  4-1 시작 : 실행 가능한 SQL문장이 처음 실행될때 <br/>
- 4-2 종료 :
+ 4-2 종료 : <br/>
   1.Commit or Rollback <br/>
   2. DDL이나 DCL문장의 샐행(자동 Commit) <br/>
   3. 장애발생 또는 시스템 충돌 <br/>
@@ -35,7 +35,6 @@ INSERT INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER_NAME, POSITION, HEIGHT,WEIGHT, BA
 VALUES ('1997035', 'K02', '이운재', 'GK', 182, 82, 1); UPDATE PLAYER SET HEIGHT = HEIGHT + 10; 
 COMMIT 
 ```
-
 6. Rollback <br/>
  >입력한 데이터, 수정한 데이터, 삭제한 데이터에 대하여 Commit 이전에 변경사항을 취소할 수 있는 기능 <br/>
   ```
@@ -43,8 +42,7 @@ COMMIT
 
   ROLLBACK;
   ```
- 
-7.트랜잭션의 주의점 <br/>
+7. 트랜잭션의 주의점 <br/>
  7-1. DML : Commit을 작성해야 적용이된다. <br/>
  7-2. DDL, DCL : 하나의 트랜잭션으로 DML과 달리 실행이 성공적으로 완료되면 바로 Commit된다. <br/>
  
