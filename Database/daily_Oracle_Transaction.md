@@ -40,4 +40,14 @@
 7. 트랜잭션의 주의점 <br/>
  7-1. DML : Commit을 작성해야 적용이된다. <br/>
  7-2. DDL, DCL : 하나의 트랜잭션으로 DML과 달리 실행이 성공적으로 완료되면 바로 Commit된다. <br/>
- 
+
+8. 세이브포인트
+ >트랜잭션에 포함된 전체 작업을 롤백하는 것이 아닌 현시점에서 지정해둔 SAVEPOINT까지 트랜잭션의 일부만 롤백하는 기능
+ ```
+ SAVEPOINT SAVEPT;
+ DELETE FROM TABLE1;  
+ ROLLBACK TO SAVEPT; 
+ ```
+ >ex 트랜잭션 시작 -> UPDATE -> SAVEPOINT A -> DELETE - > SAVEPOINT B -> UPDATE
+ 8-1. rollback to a 를 실행할 경우 저장점 a 이후에 정의저장점은 사라진다.
+ 8-2. rollback를 실행할경우 모든 변경 사항을 취소하고 트랜잭션의 시작위치로 이동한다.
