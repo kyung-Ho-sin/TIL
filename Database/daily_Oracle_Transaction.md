@@ -26,7 +26,7 @@
   4-2-2 DDL이나 DCL문장의 샐행(자동 Commit) <br/>
   4-2-3 장애발생 또는 시스템 충돌 <br/>
   4-2-4 deadlock 발생 <br/>
-  4-2-5 사용자가 종료 <br/>
+  4-2-5 사용자가 종료
   
 5. Commit <br/>
  >INSERT, UPDATE, DELETE 문장 사용 후에 적용을 위해 사용
