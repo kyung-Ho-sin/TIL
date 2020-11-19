@@ -48,6 +48,6 @@
  DELETE FROM TABLE1;  
  ROLLBACK TO SAVEPT; 
  ```
- >ex 트랜잭션 시작 -> UPDATE -> SAVEPOINT A -> DELETE - > SAVEPOINT B -> UPDATE <br/>
+ - ex 트랜잭션 시작 -> UPDATE -> SAVEPOINT A -> DELETE - > SAVEPOINT B -> UPDATE <br/>
  8-1. rollback to a 를 실행할 경우 저장점 a 이후에 정의저장점은 사라진다. <br/>
  8-2. rollback를 실행할경우 모든 변경 사항을 취소하고 트랜잭션의 시작위치로 이동한다.
