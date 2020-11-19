@@ -29,20 +29,20 @@
   4-2-5 사용자가 종료 <br/>
   
 5. Commit <br/>
- 5-1 INSERT, UPDATE, DELETE 문장 사용 후에 적용을 위해 사용
-```
-INSERT INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER_NAME, POSITION, HEIGHT,WEIGHT, BACK_NO) 
-VALUES ('1997035', 'K02', '이운재', 'GK', 182, 82, 1); UPDATE PLAYER SET HEIGHT = HEIGHT + 10; 
-COMMIT 
-```
+ >INSERT, UPDATE, DELETE 문장 사용 후에 적용을 위해 사용
+ ```
+ INSERT INTO PLAYER (PLAYER_ID, TEAM_ID, PLAYER_NAME, POSITION, HEIGHT,WEIGHT, BACK_NO) 
+ VALUES ('1997035', 'K02', '이운재', 'GK', 182, 82, 1); UPDATE PLAYER SET HEIGHT = HEIGHT + 10; 
+ COMMIT 
+ ```
 
 6. Rollback <br/>
- 6-1 입력한 데이터, 수정한 데이터, 삭제한 데이터에 대하여 Commit 이전에 변경사항을 취소할 수 있는 기능 <br/>
- ```
- DELETE FROM TABLE1;
- 
- ROLLBACK;
- ```
+ >입력한 데이터, 수정한 데이터, 삭제한 데이터에 대하여 Commit 이전에 변경사항을 취소할 수 있는 기능 <br/>
+  ```
+  DELETE FROM TABLE1;
+
+  ROLLBACK;
+  ```
  
 7.트랜잭션의 주의점 <br/>
  7-1. DML : Commit을 작성해야 적용이된다. <br/>
