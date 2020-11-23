@@ -10,7 +10,7 @@
 ```
 SHOW PARAMETER SESSIONS
 ```
->기본적으로 오라클 db에 최대 sESSION으로 젹용되어있는 것을 확인할수 있는 쿼리이다.
+>기본적으로 오라클 db에 최대 ESSION으로 젹용되어있는 것을 확인할수 있는 쿼리이다.
 
 ```
 SELECT USERNAME, PROGRAM FROM V$SESSION;
