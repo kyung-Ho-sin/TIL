@@ -18,5 +18,58 @@ SELECT USERNAME, PROGRAM FROM V$SESSION;
 
 ##### 세션 강제 종료
 ```
-SELECT 
+SELECT USERNAME, SID, SEIAL#, STATUS FROM V$SESSION WHERE USERNAME = 'SUNNY'
+
+USERNAME                SID         SERIAL#       STATUS
+--------------------- -------------- -------------- ----------------
+SUNNY                       10               3             INACTIVE
 ```
+```
+ALTER SYSTEM KILL SESSION '10, 3';
+
+SELECT USERNAME, SID, SEIAL#, STATUS FROM V$SESSION WHERE USERNAME = 'SUNNY'
+
+USERNAME                SID         SERIAL#       STATUS
+--------------------- -------------- -------------- ----------------
+SUNNY                       10               3              KILLED
+```
+>오라클이 세션을 강제 종료할 떄, 해당 세션은 더 이상의 SQL문을 실행하는 것을 막는다. 만일 강제 종료하는 시점에 SQL문을 실행
+중이었다면, 해당 SQL문은 종료되고 모든 변경사항들은 롤백된다. 또한 해당 세션에 의해 사용되던 잠금(LOCK) 및 기타 자원들도 해
+제된다.
+
+### LOCK
+>특정세션에서 조작중인 데이터는 트랜잭션이 완료(COMMIT, ROLLBACK)되기 전까지 다른 세션에서 조작할 수 없는 상태가 됩니다.즉 데이터가 잠기는 것이다. LOCK은 조작 중인 데이터를 다른 세션은 조작할 수 없도록 접근을 보륫 시키는 것을 뜻한다.
+```
+SELECT  DO.OBJECT_NAME, DO.OWNER, DO.OBJECT_TYPE, DO.OWNER,
+        VO.XIDUSN, VO.SESSION_ID, VO.LOCKED_MODE
+FROM    V$LOCKED_OBJECT VO, DBA_OBJECTS DO
+WHERE   VO.OBJECT_ID = DO.OBJECT_ID;
+```
+>LOCK이 걸린 테이블을 확인하는 쿼리문이다.
+
+```
+SELECT DISTINCT t1.session_id AS session_id
+               ,t2.serial# AS serial_no
+               ,t1.os_user_name AS os_user_name
+               ,t1.oracle_username AS oracle_username
+               ,t2.status AS status
+               ,t3.object_name
+               ,DECODE( locked_mode
+                       ,2, 'ROW SHARE'
+                       ,3, 'ROW EXCLUSIVE'
+                       ,4, 'SHARE'
+                       ,5, 'SHARE ROW EXCLUSIVE'
+                       ,6, 'EXCLUSIVE'
+                       ,'UNKNOWN'
+                      ) lock_mode
+           FROM v$locked_object t1, v$session t2, dba_objects t3
+          WHERE t1.session_id = t2.SID
+            AND t1.object_id = t3.object_id;
+       
+alter system kill session '*SESSION_ID*,*SERIAL_NO*';
+```
+>락이 걸린 시리얼 넘버와 아이디 를 검색한후 KILL하는 쿼리문이다.
+
+### 한 줄
+>LOCK 부분이 진짜 어려운듯하다. 그냥 LOCK이란 개념을 이해하는것은 어렵지 않으나 상황에 따른 쿼리문을 작성하고 KILL하는 부분이 어려운듯하다.
+
