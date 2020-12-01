@@ -87,9 +87,9 @@ public class StudentServiceImpl implements StudentService {
     }
 }
 ```
->위의 3가지 방법중 3번째 방법인 생성자 주입방식을 권장한다. 권장하는 이유는 아래의 참조 링크를 확인하기 바란다.
-[참조] https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/
-[참조] https://gmlwjd9405.github.io/2018/11/09/dependency-injection.html
+>위의 3가지 방법중 3번째 방법인 생성자 주입방식을 권장한다. 권장하는 이유는 아래의 참조 링크를 확인하기 바란다.<br/>
+[참조] https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/ <br/>
+[참조] https://gmlwjd9405.github.io/2018/11/09/dependency-injection.html <br/>
 
 #### 한 줄
 >예전에 정리를 한적도 있고 한 내용들이다. Spring에 대해서 다시한번 공부하면서 감을 찾고자 강의를 보며 검색을 하며 정리하였다. 다시 Spring을 공부하며 까먹은 부분들이 있지만 좋아했던 Spring을 다시 공부한다는게 즐겁다.
