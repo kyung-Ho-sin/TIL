@@ -104,3 +104,24 @@ public void Method(String Test) {
 	System.out.println();
 }
 ```
+#### 생성자 정의하는 방법
+1. 생성자
+- 객체를 생성할 때 항상 실행되는 것으로, 객체를 초기화해주기 위해 맨 처음 실행되는 메소드이다.
+- 반환값이 없다.
+- 클래스에는 반드시 생성자가 존재해야 한다.(생서자를 안만들시 default로 생성된다)
+- 인스턴스 생성시 딱 한번 호출 된다.
+- 인스턴스 변수의 초기화가 목적이다.
+- 클래스 이름과 동일한 이름을 가진다.
+```
+public Class(String Today, String Week) {
+	this.Today = Today;
+	this.Week = Week;
+}
+
+public static void main(String[] args) {
+	// 오류
+	Class cls = new Class();
+	// 동작
+	Class cls = new Class("이름","5주차");	
+}
+```
