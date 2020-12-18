@@ -112,7 +112,7 @@ public void Method(String Test) {
 - 인스턴스 생성시 딱 한번 호출 된다.
 - 인스턴스 변수의 초기화가 목적이다.
 - 클래스 이름과 동일한 이름을 가진다.
-```
+```JAVA
 public Class(String Today, String Week) {
 	this.Today = Today;
 	this.Week = Week;
