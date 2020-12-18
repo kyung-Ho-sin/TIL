@@ -30,5 +30,5 @@ public class @Class {
 	}
 }
 ```
-3. 접근지정자
+3. 접근지정자 <br/>
 ![접근지정자](https://user-images.githubusercontent.com/51444580/102589042-c482e080-4151-11eb-9569-f76f9782624d.GIF)
