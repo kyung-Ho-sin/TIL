@@ -126,10 +126,9 @@ public static void main(String[] args) {
 }
 ```
 #### this 키워드 이해하기
-1. this
 - 현재 클래스의 인스턴스를 의미한다.
 - 현재 클래스의 멤버변수를 지정할때 사용한다.
-- this를 사용해 명확하게 구분해 줄 수 있다.
+- this 와 this()는 다르다.
 ```JAVA
 public class Class {
 	
