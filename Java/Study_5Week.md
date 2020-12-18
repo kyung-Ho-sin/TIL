@@ -10,7 +10,7 @@
 - 객체를 생성하기 위한 틀이다.
 - 자바는 클래스들의 모임으로 이루어져 있다.
 
-* Class 생성
+** Class 생성
 ```JAVA
 public class Class {
 	public static void main(String[] args) {
