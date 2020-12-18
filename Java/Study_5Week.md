@@ -27,8 +27,9 @@ public class Class {
 	//생성자 생성시 생략 가능 
 	public Class() {}
 	//파라미터가 있을시는 생성해야한다
-	public Class(int value, String test) {
-		
+	public Class(String Today, String Week) {
+		this.Today = Today;
+		this.Week = Week;
 	}
 	//메소드
 	public void Method() {
