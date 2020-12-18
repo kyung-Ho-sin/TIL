@@ -15,6 +15,28 @@
 - 필드 : 클래스 안에서 선언되는 멤버 변수
 - 생성자 : 객체 생성시 인스턴스 변수를 원하는 값으로 초기화할 수 있게 도와주는 메소드
 - 메소드 : 특정 작업을 수행하기 위한 명령문의 집합
+```JAVA
+public class Class {
+	//필드
+	//멤버 변수
+	String Today;
+	String Week;
+	//클래스 변수
+	static String name;
+	
+	//생성자 생성시 생략 가능 
+	public Class() {}
+	//파라미터가 있을시는 생성해야한다
+	public Class(int value, String test) {
+		
+	}
+	//메소드
+	public void Method() {
+		
+	}
+}
+```
+
 
 2-1. 클래스 작성 규칙 
 - 하나 이상의 문자로 이루어져야 한다. 
