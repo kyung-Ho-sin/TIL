@@ -14,12 +14,18 @@
 2. 클래스 작성 규칙 
 - 하나 이상의 문자로 이루어져야 한다. 
 - 첫 번째 글자에는 숫자가 올 수 없다. 
-- $,_ 외에는 특수문자 사용불가 ($port (o), c@r(x))
-- 자바 명령어, 키워드는 사용할 수 없다.(while, for, int 등 사용불가) 
-- 이름은 대소문자를 구분한다.(보통, 첫번째 글자는 대문자로 작성)
+- $,_ 외에는 특수문자 사용불가 하다.
+- 자바 명령어, 키워드는 사용할 수 없다.
 
 ```JAVA
-public class Class {
+// 가능
+public class _Class {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+}
+// 불가능
+public class @Class {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	}
